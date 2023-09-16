@@ -20,7 +20,7 @@ join sakila.city cy on cy.city_id = a.city_id
 group by sf.staff_id, cy.city_id 
 having COUNT(cr.customer_id) > 300;
 ```
-
+![alt text](https://github.com/Roman-Teterevlev/SYS-21_12-04/blob/main/12-04_1.png)
 
 ### Задание 2
 
@@ -32,7 +32,7 @@ select COUNT(f.title)
 from sakila.film f  
 where f.`length` > (select AVG(`length`) from sakila.film);
 ```
-
+![alt text](https://github.com/Roman-Teterevlev/SYS-21_12-04/blob/main/12-04_2.png)
 
 ### Задание 3
 
@@ -45,5 +45,5 @@ from (select SUM(p.amount) 'amount_of_payments', DATE_FORMAT(p.payment_date, '%M
 order by t.amount_of_payments desc  
 limit 1;
 ```
-
+![alt text](https://github.com/Roman-Teterevlev/SYS-21_12-04/blob/main/12-04_3.png)
 
